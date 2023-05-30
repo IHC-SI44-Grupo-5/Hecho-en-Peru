@@ -55,7 +55,56 @@
     </header>
 
     <main>
-        
+        <section class="row box_inicio_sesion">
+            <figure class="col-6 image_llama">
+                <img src="../img/llama-machupichu.jpg" alt="llamita">
+            </figure>
+
+            <section id="login-form" class="col-6 form-inicio_sesion">
+                <div class="formulario">
+                    <h1 class="form-h1-espacio">Iniciar sesión</h1>
+                    <form class="form-info" id="login-form">
+                        <div class="espacio iniciar-sesion-group">
+                            <h3 class="text-start">Correo electrónico</h3>
+                            <input type="email" id="login-email" placeholder="Ingresa tu correo electrónico"
+                                name="email" class="input-field">
+                            <p id="email-error" class="error-message"></p>
+                        </div>
+
+                        <div class="espacio iniciar-sesion-group">
+                            <h3 class="text-start">Contraseña</h3>
+                            <input type="password" id="login-password" placeholder="Ingresa tu contraseña"
+                                class="input-field">
+                            <p id="password-error" class="error-message"></p>
+                            <p class="text-end">¿Olvidaste tu contraseña?</p>
+                        </div>
+
+                        <div>
+                            <button id="btn-iniciar-sesion" type="submit">Iniciar sesión</button>
+                        </div>
+
+                        <div class="Other_sesion row">
+                            <div class="col-md-6">
+                                <button>
+                                    <li><img src="../images/google.png" alt=""></li> Inicia sesión con Google
+                                </button>
+                            </div>
+
+                            <div class="col-md-6">
+                                <button>
+                                    <li><img src="../images/microsoft.png" alt=""></li> Inicia sesión con Microsoft
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="box-contorno">
+                        <h6>¿No tienes una cuenta?</h6>
+                        <a href="registro.html">Regístrate</a>
+                    </div>
+                </div>
+            </section>
+        </section>
     </main>
 
     <footer>
