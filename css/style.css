@@ -466,6 +466,91 @@ nav .icons i:hover {
   opacity: 0.7;
 }
 
+.fondo-quienes-somos-img {
+  background-image: url("../img/hero-section/quienes-somos-fondo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container-descripcion {
+  width: 90%;
+  margin: auto;
+  margin-top: 3rem;
+}
+.container-descripcion .bg-color {
+  background-color: #F6F6F6;
+  padding: 1.2rem;
+  text-align: justify;
+}
+
+.container-m-v {
+  width: 92%;
+  margin: auto;
+  margin-top: 3rem;
+}
+.container-m-v .bg-color {
+  background-color: #F6F6F6;
+  padding: 1.2rem;
+  text-align: justify;
+}
+.container-m-v .row {
+  margin-bottom: 6rem;
+  margin: auto;
+}
+.container-m-v .row .m-v {
+  margin-top: 1rem;
+}
+.container-m-v .row .m-v .img-m-v {
+  margin: 0;
+}
+.container-m-v .row .m-v .img-m-v img {
+  border-radius: 0.5rem;
+  margin-top: 2.2rem;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-equipo-de-trabajo {
+  margin: 6rem 0;
+}
+.container-equipo-de-trabajo .equipo-de-trabajo {
+  background-color: rgba(249, 201, 70, 0.1450980392);
+  padding: 3rem 10%;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: auto;
+}
+.container-equipo-de-trabajo .equipo-de-trabajo .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.container-equipo-de-trabajo .equipo-de-trabajo .row .card-equipo {
+  padding: 1.3rem;
+  margin: 1rem;
+  background-color: #FFFFFF;
+  height: 93%;
+  box-shadow: 0rem 0.2rem 0.3rem rgba(0, 0, 0, 0.1019607843);
+}
+.container-equipo-de-trabajo .equipo-de-trabajo .row .card-equipo .per-img {
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+}
+.container-equipo-de-trabajo .equipo-de-trabajo .row .card-equipo p {
+  margin-top: 1.2rem;
+}
+.container-equipo-de-trabajo .equipo-de-trabajo .row .card-equipo .p-personal {
+  text-align: center;
+  padding: 0rem 0.4rem;
+}
+
 .fondo-contacto-img {
   background-image: url("../img/hero-section/contacto-fondo.jpg");
   background-repeat: no-repeat;
