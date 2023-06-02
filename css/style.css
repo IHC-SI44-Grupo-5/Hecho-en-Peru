@@ -2059,6 +2059,87 @@ nav .icons i:hover {
   width: 10rem;
 }
 
+#btn-crear-cuenta {
+  width: 100%;
+  border-radius: 8px;
+  padding: 0.8rem;
+  border: transparent;
+  background-color: #E9806E;
+  margin-top: 2rem;
+  color: white;
+}
+#btn-crear-cuenta:hover {
+  background-color: #E46953;
+  box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
+}
+
+.Other_sesion {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.Other_sesion button {
+  display: flex;
+  padding: 0.75rem;
+  border: transparent;
+  box-shadow: #000000;
+  border-radius: 0.5rem;
+}
+.Other_sesion img {
+  width: 1.5rem;
+  margin-right: 0.6rem;
+}
+.Other_sesion .col-md-6 {
+  display: flex;
+  justify-content: center;
+}
+
+.registro-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.registro-group:placeholder-shown {
+  font-size: 1rem;
+}
+.registro-group p {
+  text-align: start;
+  font-size: 16px;
+  color: red;
+}
+.registro-group input.invalid {
+  border: 2px solid red;
+}
+.registro-group input.valid {
+  border: 2px solid green;
+}
+.registro-group input {
+  font-size: 1rem;
+}
+
+.form-h1-espacio {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.espacio {
+  margin-top: 3rem;
+}
+
+.box-contorno {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  margin: auto;
+}
+.box-contorno h6 {
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.box-contorno a {
+  padding-left: 1.4rem;
+  color: #7b7b7b;
+}
+
 .box_inicio_sesion {
   width: 90%;
   margin: auto;
