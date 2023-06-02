@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hecho en Perú | Regiones</title>
+    <title>Hecho en Perú | Registro</title>
 
-    <link href="../img/favicon.png" rel="icon">
+    <link href="../img/logo-navbar.png" rel="icon">
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -54,8 +54,68 @@
         </nav>
     </header>
 
-    <main>
-        
+<main>
+        <section class="row box_inicio_sesion">
+            <section id="login-form" class="col-6 form-inicio_sesion">
+                <div class="formulario">
+                    <h1 class="form-h1-espacio">Registrarse</h1>
+                    <form class="form-info" id="registration-form">
+                        <div class="names_form">
+                            <div class="espacio registro-group">
+                                <h3 class="text-start">Nombre</h3>
+                                <input type="text" placeholder="Ingresa tus nombres" id="registro-name" onkeyup="validateName()">
+                            <p id="name-error" class="error-message"></p>
+                            </div>
+
+                            <div class="espacio registro-group">
+                                <h3 class="text-start">Apellido</h3>
+                                <input type="text" placeholder="Ingresa tus apellidos" id="registro-LastName" onkeyup="validateLastName()">
+                            <p id="LastName-error" class="error-message"></p>
+                            </div>
+                        </div>
+
+                        <div class="espacio registro-group">
+                            <h3 class="text-start">Correo electrónico</h3>
+                            <input type="email" placeholder="Ingresa tu correo electrónico" name="email" id="registro-email" onkeyup="validateEmail()">
+                            <p id="email-error" class="error-message"></p>
+                        </div>
+
+                        <div class="espacio registro-group">
+                            <h3 class="text-start">Contraseña</h3>
+                            <input type="password" placeholder="Ingresa tu contraseña" id="registro-password" onkeyup="validatePassword()">
+                            <p id="password-error" class="error-message"></p>
+                        </div>
+
+                        <div>
+                            <button onclick="return validateForm()" id="btn-crear-cuenta" type="submit">Crear cuenta</button>
+                        </div>
+
+                        <div class="span-btn">
+                            <p id="subit-error"></p>
+                        </div>
+
+                        <div class="Other_sesion row">
+                            <div class="col-md-6"> 
+                                <button> <li><img src="../img/google.png" alt=""></li> Crear cuenta con Google</button>
+                            </div>
+    
+                            <div class="col-md-6"> 
+                                <button> <li><img src="../img/microsoft.png" alt=""></li> Crear cuenta con Microsoft</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="box-contorno">
+                        <h6>¿Ya tienes una cuenta?</h6>
+                        <a href="login.html">Inicia sesión</a>
+                    </div>
+                </div>
+            </section>
+
+            <figure class="col-6 image_llama">
+                <img src="../img/2-llamitas.jpg" alt="llamita">
+            </figure>
+        </section>
     </main>
 
     <footer>
@@ -102,7 +162,11 @@
             </ul>
         </div>
     </footer>
+    
+    <script src="../js/active-state.js"></script>
 
+    <script src="../js/signup.js"></script>
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();

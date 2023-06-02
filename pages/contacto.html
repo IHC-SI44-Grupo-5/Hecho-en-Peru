@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hecho en Perú | Contacto</title>
 
-    <link href="../img/favicon.png" rel="icon">
+    <link href="../img/logo-navbar.png" rel="icon">
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -72,6 +72,106 @@
                 </div>
             </div>
         </section>
+
+        <!-- chatbot -->
+        <section>
+            <div class="borde-butom">
+                <li id="toggleButton"><i class="fa-solid fa-message fa-2x"></i></li>
+
+                <div id="chatbotContainer">
+                    <div class="chatbox-wrapper">
+                        <div id="chatbot-container">
+                            <div id="chatbot-header">
+                                <img src="../img/chatbot.jpg" alt="Chatbot Image">
+                                <div class="nombre_p">
+                                    <h4>Pacha la llama</h4>
+                                    <p>en línea</p>
+                                </div>
+
+                                <li id="clear-chat-button"><i class="fa-regular fa-trash-can"></i></li>
+
+                            </div>
+
+                            <div id="chatbot-body">
+                                <div id="chat-container">
+                                    <div id="chat-log"></div>
+                                </div>
+                            </div>
+
+                            <div class="foo-chtbot">
+                                <div id="faq-buttons-container">
+                                    <button class="faq-button" data-question="¿Cuál es el horario de atención?">¿Cuál es
+                                        el
+                                        horario de atención?</button>
+                                    <button class="faq-button"
+                                        data-question="¿Cuáles son los métodos de pago aceptados?">¿Cuáles son los
+                                        métodos de
+                                        pago aceptados?</button>
+                                    <button class="faq-button"
+                                        data-question="¿Cómo puedo contactar al servicio al cliente?">¿Cómo puedo
+                                        contactar al
+                                        servicio al cliente?</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-contacto">
+            <div class="row form-contac-row">
+                <div class="col-6">
+                    <section class="form-inicio_sesion">
+                        <form class="form-contact">
+                            <div class="input-group padding-abajo">
+                                <h6>Nombre</h6>
+                                <input type="text" placeholder="Ingresa tus nombres" id="contact-name"
+                                    onkeyup="validateName()">
+                                <span id="name-error" class="error-message"></span>
+                            </div>
+
+                            <div class="input-group padding-abajo">
+                                <h6>Correo electrónico</h6>
+                                <input type="email" placeholder="Ingresa tu correo electrónico" name="email"
+                                    id="contact-email" onkeyup="validateEmail()">
+                                <span id="email-error" class="error-message"></span>
+                            </div>
+
+                            <div class="input-group padding-abajo">
+                                <h6>Asunto</h6>
+                                <input type="text" placeholder="Ingresa el motivo de tu mensaje" id="contact-asunto"
+                                    onkeyup="validateAsunto()">
+                                <span id="motivo-error" class="error-message"></span>
+                            </div>
+
+                            <div class="input-group">
+                                <h6>Mensaje</h6>
+                                <textarea class="input-menssage-contact" placeholder="Ingresa tu mensaje" name="message"
+                                    id="contact-menssage" onkeyup="validateMensaje()"></textarea>
+                                <span id="mensaje-error" class="error-message"></span>
+                            </div>
+
+                            <div class="btn-contac-submit">
+                                <button id="btn-contac-one" type="reset" value="Restablecer"
+                                    onclick="resetForm()">Restablecer</button>
+                                <button onclick="return validateForm()" id="btn-contac-two"
+                                    type="submit">Enviar</button>
+                            </div>
+
+                            <div class="span-btn">
+                                <span id="subit-error"></span>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+
+                <div class="col-6 img-contact d-flex align-items-center">
+                    <img class="img-fluid" src="../img/img-contacto/Recepcionista.jpg"
+                        alt="Recepcionista sonriente agarrando el teléfono de la empresa">
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -118,6 +218,11 @@
             </ul>
         </div>
     </footer>
+
+    <script src="../js/active-state.js"></script>
+    <script src="../js/chatbot.js"></script>
+    
+    <script src="../js/contacto.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
