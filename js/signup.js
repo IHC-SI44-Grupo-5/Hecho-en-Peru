@@ -166,7 +166,7 @@ function validateForm() {
     }, 10000);
 
     // Redirigir al usuario a la página de inicio de sesión
-    window.location.href = '../pages/iniciosesion.html';
+    window.location.href = '../pages/login.html';
 
     return true;
     
