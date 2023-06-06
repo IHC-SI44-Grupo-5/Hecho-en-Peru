@@ -22,7 +22,7 @@ function validateName(){
     }
     nameError.style.color = 'green';
     nameError.style.position ='absolute'
-    nameError.style.top ='45%'
+    nameError.style.top ='53%'
     nameError.style.right ='10%'
     nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
     inputElement.classList.remove('invalid');
