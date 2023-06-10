@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hecho en Perú | Iniciar sesión</title>
+    <title>Hecho en Perú | Registro</title>
 
-    <link href="../img/logo-navbar.png" rel="icon">
+    <link href="./assests/images/logo-navbar.png" rel="icon">
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -27,14 +27,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="./assests/styles/styles.css">
 </head>
 
 <body>
     <header>
         <nav>
             <div class="logo">
-                <a href="../index.html"><img src="../img/logo-navbar.png" alt="Logo de Hecho en Perú"></a>
+                <a href="../index.html"><img src="./assests/images/logo-navbar.png" alt="Logo de Hecho en Perú"></a>
             </div>
             <div class="menu d-flex justify-content-around">
                 <a class="menu-item" href="../index.html">Inicio</a>
@@ -54,62 +54,73 @@
         </nav>
     </header>
 
-    <main>
+<main>
         <section class="row box_inicio_sesion">
-            <figure class="col-6 image_llama">
-                <img src="../img/llama-machupichu.jpg" alt="llamita">
-            </figure>
-
             <section id="login-form" class="col-6 form-inicio_sesion">
                 <div class="formulario">
-                    <h1 class="form-h1-espacio">Iniciar sesión</h1>
-                    <form class="form-info" id="login-form">
-                        <div class="espacio iniciar-sesion-group">
+                    <h1 class="form-h1-espacio">Registrarse</h1>
+                    <form class="form-info" id="registration-form">
+                        <div class="names_form">
+                            <div class="espacio registro-group">
+                                <h3 class="text-start">Nombre</h3>
+                                <input type="text" placeholder="Ingresa tus nombres" id="registro-name" onkeyup="validateName()">
+                            <p id="name-error" class="error-message"></p>
+                            </div>
+
+                            <div class="espacio registro-group">
+                                <h3 class="text-start">Apellido</h3>
+                                <input type="text" placeholder="Ingresa tus apellidos" id="registro-LastName" onkeyup="validateLastName()">
+                            <p id="LastName-error" class="error-message"></p>
+                            </div>
+                        </div>
+
+                        <div class="espacio registro-group">
                             <h3 class="text-start">Correo electrónico</h3>
-                            <input type="email" id="login-email" placeholder="Ingresa tu correo electrónico"
-                                name="email" class="input-field">
+                            <input type="email" placeholder="Ingresa tu correo electrónico" name="email" id="registro-email" onkeyup="validateEmail()">
                             <p id="email-error" class="error-message"></p>
                         </div>
 
-                        <div class="espacio iniciar-sesion-group">
+                        <div class="espacio registro-group">
                             <h3 class="text-start">Contraseña</h3>
-                            <input type="password" id="login-password" placeholder="Ingresa tu contraseña"
-                                class="input-field">
+                            <input type="password" placeholder="Ingresa tu contraseña" id="registro-password" onkeyup="validatePassword()">
                             <p id="password-error" class="error-message"></p>
-                            <p class="text-end">¿Olvidaste tu contraseña?</p>
                         </div>
 
                         <div>
-                            <button id="btn-iniciar-sesion" type="submit">Iniciar sesión</button>
+                            <button onclick="return validateForm()" id="btn-crear-cuenta" type="submit">Crear cuenta</button>
+                        </div>
+
+                        <div class="span-btn">
+                            <p id="subit-error"></p>
                         </div>
 
                         <div class="Other_sesion row">
-                            <div class="col-md-6">
-                                <button>
-                                    <li><img src="../img/google.png" alt=""></li> Inicia sesión con Google
-                                </button>
+                            <div class="col-md-6"> 
+                                <button> <li><img src="./assests/images/google.png" alt="Logo de Google"></li> Crear cuenta con Google</button>
                             </div>
-
-                            <div class="col-md-6">
-                                <button>
-                                    <li><img src="../img/microsoft.png" alt=""></li> Inicia sesión con Microsoft
-                                </button>
+    
+                            <div class="col-md-6"> 
+                                <button> <li><img src="./assests/images/microsoft.png" alt="Logo de Microsoft"></li> Crear cuenta con Microsoft</button>
                             </div>
                         </div>
                     </form>
 
                     <div class="box-contorno">
-                        <h6>¿No tienes una cuenta?</h6>
-                        <a href="signup.html">Regístrate</a>
+                        <h6>¿Ya tienes una cuenta?</h6>
+                        <a href="./login.html">Inicia sesión</a>
                     </div>
                 </div>
             </section>
+
+            <figure class="col-6 image_llama">
+                <img src="./assests/images/2-llamitas.jpg" alt="llamita">
+            </figure>
         </section>
     </main>
 
     <footer>
         <div class="logo d-flex justify-content-center align-items-center">
-            <a class="text-decoration-none" href="../index.html"><img src="../img/logo-footer.png"
+            <a class="text-decoration-none" href="../index.html"><img src="./assests/images/logo-footer.png"
                     alt="Logo de Hecho en Perú"></a>
         </div>
         <div class="footer-navigation">
@@ -151,11 +162,10 @@
             </ul>
         </div>
     </footer>
-
-    <script src="../js/active-state.js"></script>
-
-    <script src="../js/login.js"></script>
-
+    
+    <script src="./assests/scripts/active-state.js"></script>
+    <script src="./assests/scripts/signup.js"></script>
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
