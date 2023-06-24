@@ -48,7 +48,28 @@
                 <button type="submit">Buscar</button>
             </div>
             <div class="icons d-flex justify-content-around">
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <!--Cart icon-->
+                <i id="cart-icon" class="fas fa-shopping-cart" style="cursor: pointer;"></i>
+                <!--Cart section-->
+                <section class="cart">
+                    <h3>Tu carrito</h3>
+                    <div class="empty-cart">
+                        <p>El carrito está vacío.</p>
+                        <i class="fa-regular fa-face-sad-cry"></i>
+                    </div>
+                    <div class="cart-content">
+                        
+                    </div>
+                    <!--Total-->
+                    <div class="cart-total">
+                        <h4>Total</h4>
+                        <div class="total-price">s/.0.00</div>
+                    </div>
+                    <!--Buy Button-->
+                    <button type="button" class="btn-buy-cart" onclick = "window.location.href = './pago.html';">Comprar ahora</button>
+                    <!--Close cart-->
+                    <button id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+                </section>
                 <a href="./login.html"><i class="fas fa-user"></i></a>
             </div>
         </nav>
@@ -307,21 +328,21 @@
 
             <div class="container_productos col-md-9 col-sm-12 row">
                 <div data-region="cusco" data-category="ponchos" class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/poncho-lana-main.jpg" alt="poncho"></figure>
+                    <figure onclick="window.location.href = './productos/poncho-lana.html';"><img src="assests/images/img-catalogo/poncho-lana-main.jpg" class="product-img" alt="poncho"></figure>
 
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
                         <span class="rating-value">4.5</span>
                     </div>
 
-                    <div class="info-product">
-                        <h4>Poncho de lana</h4>
-                        <p class="precio_product">s/.150.00</p>
-                        <button onclick="window.location.href = './productos/poncho-lana.html';">Ver producto</button>
+                    <div class="info-product" onclick="window.location.href = './productos/poncho-lana.html';">
+                        <h4 class="product-title">Poncho de lana</h4>
+                        <p class="precio-product">s/.150.00</p>
                     </div>
+                    <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="puno" data-category="ponchos" class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/poncho-tejido-crochet-main.jpg" alt="poncho"></figure>
+                    <figure><img src="assests/images/img-catalogo/poncho-tejido-crochet-main.jpg" class="product-img" alt="poncho"></figure>
 
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -329,14 +350,14 @@
                     </div>
 
                     <div class="info-product">
-                        <h4>Poncho de lana tejido a crochet</h4>
-                        <p class="precio_product">s/.170.00</p>
-                        <button>Ver producto</button>
+                        <h4 class="product-title">Poncho de lana tejido a crochet</h4>
+                        <p class="precio-product">s/.170.00</p>
                     </div>
+                    <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="ayacucho" data-category="decoraciones"
                     class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/plato-urpi-main.jpg" alt="poncho"></figure>
+                    <figure><img src="assests/images/img-catalogo/plato-urpi-main.jpg" class="product-img"alt="poncho"></figure>
 
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -344,14 +365,14 @@
                     </div>
 
                     <div class="info-product">
-                        <h4>Plato Urpi</h4>
-                        <p class="precio_product">s/.75.00</p>
-                        <button>Ver producto</button>
+                        <h4 class="product-title">Plato Urpi</h4>
+                        <p class="precio-product">s/.75.00</p>
                     </div>
+                    <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="amazonas" data-category="accesorios"
                     class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/aretes-hilo.jpg" alt="poncho"></figure>
+                    <figure><img src="assests/images/img-catalogo/aretes-hilo.jpg" class="product-img" alt="poncho"></figure>
 
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -359,14 +380,14 @@
                     </div>
 
                     <div class="info-product">
-                        <h4>Aretes de fibra de chambira</h4>
-                        <p class="precio_product">s/.30.00</p>
-                        <button>Ver producto</button>
+                        <h4 class="product-title">Aretes de fibra de chambira</h4>
+                        <p class="precio-product">s/.30.00</p>
                     </div>
+                    <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="amazonas" data-category="accesorios"
                     class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/collar-mostacilla.jpg" alt="poncho"></figure>
+                    <figure><img src="assests/images/img-catalogo/collar-mostacilla.jpg" class="product-img" alt="poncho"></figure>
 
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -374,14 +395,14 @@
                     </div>
 
                     <div class="info-product">
-                        <h4>Collar de mostacilla</h4>
-                        <p class="precio_product">s/.172.50</p>
-                        <button>Ver producto</button>
+                        <h4 class="product-title">Collar de mostacilla</h4>
+                        <p class="precio-product">s/.172.50</p>
                     </div>
+                    <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="ayacucho" data-category="decoraciones"
                     class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/cojin-lana-main.jpg" alt="poncho"></figure>
+                    <figure><img src="assests/images/img-catalogo/cojin-lana-main.jpg" class="product-img" alt="poncho"></figure>
 
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -389,13 +410,13 @@
                     </div>
 
                     <div class="info-product">
-                        <h4>Set de cojines de lana </h4>
-                        <p class="precio_product">s/.120.00</p>
-                        <button>Ver producto</button>
+                        <h4 class="product-title">Set de cojines de lana </h4>
+                        <p class="precio-product">s/.120.00</p>
                     </div>
+                    <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="apurimac" data-category="chalinas" class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/chalina-tejida-main.jpg" alt="poncho"></figure>
+                    <figure><img src="assests/images/img-catalogo/chalina-tejida-main.jpg" class="product-img" alt="poncho"></figure>
 
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -403,13 +424,13 @@
                     </div>
 
                     <div class="info-product">
-                        <h4>Bufanda tejida</h4>
-                        <p class="precio_product">s/.70.00</p>
-                        <button>Ver producto</button>
+                        <h4 class="product-title">Bufanda tejida</h4>
+                        <p class="precio-product">s/.70.00</p>
                     </div>
+                    <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="ayacucho" data-category="muebles" class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo//banco-tejido-main.jpg" alt="poncho"></figure>
+                    <figure><img src="assests/images/img-catalogo//banco-tejido-main.jpg" class="product-img" alt="poncho"></figure>
 
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -417,14 +438,14 @@
                     </div>
 
                     <div class="info-product">
-                        <h4>Banco tejido de lana</h4>
-                        <p class="precio_product">s/.550.00</p>
-                        <button>Ver producto</button>
+                        <h4 class="product-title">Banco tejido de lana</h4>
+                        <p class="precio-product">s/.550.00</p>
                     </div>
+                    <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="ayacucho" data-category="ponchos"
                     class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/poncho-capucha-main.jpg" alt="poncho"></figure>
+                    <figure><img src="assests/images/img-catalogo/poncho-capucha-main.jpg" class="product-img" alt="poncho"></figure>
 
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -432,13 +453,13 @@
                     </div>
 
                     <div class="info-product">
-                        <h4>Poncho de lana con capucha</h4>
-                        <p class="precio_product">s/.115.00</p>
-                        <button>Ver producto</button>
+                        <h4 class="product-title">Poncho de lana con capucha</h4>
+                        <p class="precio-product">s/.115.00</p>
                     </div>
+                    <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="ayacucho" data-category="muebles" class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/baul-tejido-main.jpg" alt="poncho"></figure>
+                    <figure><img src="assests/images/img-catalogo/baul-tejido-main.jpg" class="product-img" alt="poncho"></figure>
 
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -446,14 +467,14 @@
                     </div>
 
                     <div class="info-product">
-                        <h4>Banco tejido de lana</h4>
-                        <p class="precio_product">s/.100.00</p>
-                        <button>Ver producto</button>
+                        <h4 class="product-title">Banco tejido de lana</h4>
+                        <p class="precio-product">s/.100.00</p>
                     </div>
+                    <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="ayacucho" data-category="sombreros"
                     class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/chullo-blanco-main.jpeg" alt="poncho"></figure>
+                    <figure><img src="assests/images/img-catalogo/chullo-blanco-main.jpeg" class="product-img" alt="poncho"></figure>
 
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -461,14 +482,14 @@
                     </div>
 
                     <div class="info-product">
-                        <h4>Chullo de lana con<br>orejeras</h4>
-                        <p class="precio_product">s/.50.00</p>
-                        <button>Ver producto</button>
+                        <h4 class="product-title">Chullo de lana con<br>orejeras</h4>
+                        <p class="precio-product">s/.50.00</p>
                     </div>
+                    <button class="add-cart">Añadir al carrito</button>
                 </div>
                 <div data-region="apurimac" data-category="decoraciones"
                     class="product col-lg-4 col-md-4 col-sm-6 col-12">
-                    <figure><img src="assests/images/img-catalogo/cuadro-tejido-main.jpg" alt="poncho"></figure>
+                    <figure><img src="assests/images/img-catalogo/cuadro-tejido-main.jpg" class="product-img" alt="poncho"></figure>
 
                     <div class="rating">
                         <i class="fa-solid fa-star"></i>
@@ -476,10 +497,10 @@
                     </div>
 
                     <div class="info-product">
-                        <h4>Cuadro tejido de lana</h4>
-                        <p class="precio_product">s/.150.00</p>
-                        <button>Ver producto</button>
+                        <h4 class="product-title">Cuadro tejido de lana</h4>
+                        <p class="precio-product">s/.150.00</p>
                     </div>
+                    <button class="add-cart">Añadir al carrito</button>
                 </div>
 
                 <div class="pages col-12">
@@ -506,8 +527,8 @@
 
                             <div class="info-product">
                                 <h4>Poncho de lana</h4>
-                                <p class="precio_product">s/.150.00</p>
-                                <button onclick="window.location.href = './productos/poncho-lana.html';">Ver producto</button>
+                                <p class="precio-product">s/.150.00</p>
+                                <button onclick="window.location.href = './productos/poncho-lana.html';">Añadir al carrito</button>
                             </div>
                         </li>
                         <li class="carousel-product">
@@ -521,8 +542,8 @@
 
                             <div class="info-product">
                                 <h4>Gorro de lana</h4>
-                                <p class="precio_product">s/.90.00</p>
-                                <button>Ver producto</button>
+                                <p class="precio-product">s/.90.00</p>
+                                <button>Añadir al carrito</button>
                             </div>
                         </li>
                         <li class="carousel-product">
@@ -535,8 +556,8 @@
 
                             <div class="info-product">
                                 <h4>Bufanda bouclé</h4>
-                                <p class="precio_product">s/.110.00</p>
-                                <button>Ver producto</button>
+                                <p class="precio-product">s/.110.00</p>
+                                <button>Añadir al carrito</button>
                             </div>
                         </li>
                         <li class="carousel-product">
@@ -550,8 +571,8 @@
 
                             <div class="info-product">
                                 <h4>Vasija cuzqueña</h4>
-                                <p class="precio_product">s/.540.00</p>
-                                <button>Ver producto</button>
+                                <p class="precio-product">s/.540.00</p>
+                                <button>Añadir al carrito</button>
                             </div>
                         </li>
                         <li class="carousel-product">
@@ -564,8 +585,8 @@
 
                             <div class="info-product">
                                 <h4>Brazalete Shipibo</h4>
-                                <p class="precio_product">s/.40.00</p>
-                                <button>Ver producto</button>
+                                <p class="precio-product">s/.40.00</p>
+                                <button>Añadir al carrito</button>
                             </div>
                         </li>
                     </ul>
@@ -624,6 +645,7 @@
     <script src="./assests/scripts/chatbot.js"></script>
     <script src="./assests/scripts/catalogo.js"></script>
     <script src="./assests/scripts/catalogo-filters.js"></script>
+    <script src="./assests/scripts/shopping-cart.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
