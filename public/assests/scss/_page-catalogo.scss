@@ -4,6 +4,181 @@
     background-size: cover;
 }
 
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 27%;
+    min-height: 100vh;
+    padding: 1.5rem;
+    padding-right: 1rem;
+    background-color: #FFFFFF;
+    box-shadow: -0.2rem 0 0.25rem rgba(40, 37, 37, 0.221);
+    transition: 0.5s;
+    h3{
+        text-align: start;
+        margin-bottom: 1.5rem;
+    }
+    .cart-content{
+        max-height: 70vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        position: relative;
+        &::-webkit-scrollbar{
+            width: 0.7rem;
+            background: #CFC9C9;
+            border-radius: 0.5rem;
+        }
+        &::-webkit-scrollbar-thumb{
+            background-color: #929292;
+            border-radius: 0.5rem;
+        }
+        &::-moz-scrollbar{
+            width: 0.7rem;
+            background: #CFC9C9;
+            border-radius: 0.5rem;
+        }
+        &::-moz-scrollbar-thumb{
+            background-color: #929292;
+            border-radius: 0.5rem;
+        }
+        .cart-box{
+            display: grid;
+            grid-template-columns: 32% 45% 15%;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            figure{
+                border-radius: 0.5rem;
+                img{
+                    width: 100%;
+                    border-radius: 0.5rem;
+                }
+            }
+            .detail-box{
+                display: grid;
+                row-gap: 0.3rem;
+                justify-items: flex-start;
+                .cart-product-title{
+                    text-align: start;
+                }
+                .cart-quantity{
+                    display: flex;
+                    .minus{
+                        width: 25%;
+                        background-color: $background-color_2;
+                        border: none;
+                        border-radius: 0.5rem 0 0 0.5rem;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                    }
+                    .unidades-selected{
+                        background-color: $background-color_1;
+                        border: none;
+                        border-right: solid $background-color_18 1px;
+                        border-left: solid $background-color_18 1px;
+                        font-family: $font-family_1;
+                        font-weight: 600;
+                        padding: 0.2rem;
+                        text-align: center;
+                        width: 35%;
+                        -moz-appearance: textfield;
+                        &[type="number"]::-webkit-inner-spin-button {
+                            -webkit-appearance: none;
+                        }
+                        &[type="number"]::-webkit-outer-spin-button {
+                            -webkit-appearance: none;
+                        }
+                    }
+                    .plus{
+                        width: 25%;
+                        background-color: $background-color_2;
+                        border: none;
+                        border-radius: 0 0.5rem 0.5rem 0;
+                        font-size: 1.3rem;
+                        font-weight: bold;
+                    }
+                }
+            }
+            #remove-cart{
+                background-color: #FFFFFF;
+                margin-right: 1rem;
+                border: none;
+                font-size: 1.5rem;
+                text-align: center;
+                i{
+                    padding: 0;
+                    font-size: 1.5rem;
+                    color: $background-color_13;
+                }
+                &:hover{
+                    i{
+                        color: $color_4;
+                    }
+                }
+            }
+        }
+    }
+    .cart-total{
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 1rem;
+        border-top: #4F4F4F solid 1px;
+        padding-top: 1rem;
+        h4{
+            padding: 0;
+            margin: 0;
+        }
+        .total-price{
+            padding: 0;
+        }
+    }
+    .btn-buy-cart{
+        margin: auto;
+        margin-bottom: 1.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 0.7rem;
+        background-color: $background-color_13;
+        color: $color_5;
+        border: none;
+        font-size: 1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        &:hover {
+            background-color: $background-color_14;
+            color: $color_5;
+            box-shadow: 0px 3px 6px #0000001a;
+        }
+    }
+    #close-cart{
+        position: absolute;
+        top: 1rem;
+        right: 0rem;
+        background-color: #FFFFFF;
+        margin-right: 1.5rem;
+        border: none;
+        font-size: 1.5rem;
+        text-align: center;
+        i{
+            padding: 0;
+            font-size: 1.5rem;
+            color: #a6a5a5;
+        }
+        &:hover{
+            i{
+                color: $color_4;
+            }
+        }
+    }
+}
+
+.cart.active{
+    right: -1px;
+}
+
 .container-catalogo {
     width: 90%;
     margin: auto;
@@ -226,6 +401,15 @@
                     background-color: #ACDE7B;
                     border-radius: 0.5rem;
                 }
+                &::-moz-scrollbar{
+                    width: 0.5rem;
+                    background: #CFC9C9;
+                    border-radius: 0.5rem;
+                }
+                &::-moz-scrollbar-thumb{
+                    background-color: #ACDE7B;
+                    border-radius: 0.5rem;
+                }
                 .option{
                     display: flex;
                     margin-bottom: 0.5rem;
@@ -318,6 +502,15 @@
                     border-radius: 0.5rem;
                 }
                 &::-webkit-scrollbar-thumb{
+                    background-color: #ACDE7B;
+                    border-radius: 0.5rem;
+                }
+                &::-moz-scrollbar{
+                    width: 0.5rem;
+                    background: #CFC9C9;
+                    border-radius: 0.5rem;
+                }
+                &::-moz-scrollbar-thumb{
                     background-color: #ACDE7B;
                     border-radius: 0.5rem;
                 }
@@ -419,7 +612,7 @@
                 border-radius: 0.9rem;
                 text-align: center;
                 overflow: hidden;
-
+                cursor: pointer;
                 img {
                     width: 100%;
                     height: 12rem;
@@ -432,31 +625,32 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                cursor: pointer;
                 h4{
                     text-align: center;
                     font-family: $font-family_1;
                     font-size: 1rem;
                     font-weight: 600;
                 }
-                button {
-                    margin-bottom: 1rem;
-                    background-color: $background-color_13;
+            }
+            button {
+                margin-bottom: 1rem;
+                background-color: $background-color_13;
+                color: $color_5;
+                border: none;
+                width: 10rem;
+                height: 32px;
+                font-size: 1rem;
+                font-weight: 600;
+                padding: 0 10px;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+        
+                &:hover {
+                    background-color: $background-color_14;
                     color: $color_5;
-                    border: none;
-                    width: 10rem;
-                    height: 32px;
-                    font-size: 1rem;
-                    font-weight: 600;
-                    padding: 0 10px;
-                    border-radius: 10px;
-                    cursor: pointer;
-                    transition: all 0.3s ease;
-            
-                    &:hover {
-                        background-color: $background-color_14;
-                        color: $color_5;
-                        box-shadow: 0px 3px 6px #0000001a;
-                    }
+                    box-shadow: 0px 3px 6px #0000001a;
                 }
             }
         }
