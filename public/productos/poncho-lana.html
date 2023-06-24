@@ -48,7 +48,28 @@
                 <button type="submit">Enviar</button>
             </div>
             <div class="icons d-flex justify-content-around">
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <!--Cart icon-->
+                <i id="cart-icon" class="fas fa-shopping-cart" style="cursor: pointer;"></i>
+                <!--Cart section-->
+                <section class="cart">
+                    <h3>Tu carrito</h3>
+                    <div class="empty-cart">
+                        <p>El carrito está vacío.</p>
+                        <i class="fa-regular fa-face-sad-cry"></i>
+                    </div>
+                    <div class="cart-content">
+                        
+                    </div>
+                    <!--Total-->
+                    <div class="cart-total">
+                        <h4>Total</h4>
+                        <div class="total-price">s/.0.00</div>
+                    </div>
+                    <!--Buy Button-->
+                    <button type="button" class="btn-buy-cart" onclick = "window.location.href = '../pago.html';">Comprar ahora</button>
+                    <!--Close cart-->
+                    <button id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+                </section>
                 <a href="../login.html"><i class="fas fa-user"></i></a>
             </div>
         </nav>
@@ -118,7 +139,7 @@
 
                 </div>
                 <div class="main-images">
-                    <figure><img src="../assests/images/catalogo/poncho-lana-main.jpg" id="image-box"></figure>
+                    <figure><img src="../assests/images/catalogo/poncho-lana-main.jpg" id="image-box" class="product-img"></figure>
                 </div>
             </div>
             <div class="general-info">
@@ -136,8 +157,8 @@
                         40 comentarios
                     </a>
                 </div>
-                <h3>Poncho de lana</h3>
-                <h2>S/. 150.00</h2>
+                <h3 class="product-title">Poncho de lana</h3>
+                <h2 class="precio-product">s/.150.00</h2>
                 <h4>Color</h4>
                 <div class="color-options">
                     <ul>
@@ -174,15 +195,15 @@
                 </div>
                 <h4>Número de unidades</h4>
                 <div class="cantidad">
-                    <button class="minus">-</button>
-                    <input type="number" class="unidades-selected" value="1">
-                    <button class="plus">+</button>
+                    <button class="info-minus">-</button>
+                    <input type="number" class="info-unidades-selected" value="1">
+                    <button class="info-plus">+</button>
                 </div>
                 <div class="stock-producto">
                     <h4>Stock: </h4>
                     <span>10 unidades</span>
                 </div>
-                <button class="agregar-carrito"><span>Agregar al carrito</span><i
+                <button class="agregar-carrito" onclick="addProduct(event)"><span>Agregar al carrito</span><i
                         class="fa-solid fa-cart-shopping"></i></button>
             </div>
         </section>
@@ -475,6 +496,7 @@
     <script src="../assests/scripts/active-state.js"></script>
     <script src="../assests/scripts/chatbot.js"></script>
     <script src="../assests/scripts/desc-producto.js"></script>
+    <script src="../assests/scripts/shopping-cart.js"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
