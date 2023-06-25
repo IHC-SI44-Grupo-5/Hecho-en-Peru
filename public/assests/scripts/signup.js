@@ -164,7 +164,8 @@ function validateForm(event) {
 
   // Guardar el usuario en la base de datos local
   saveUserToDatabase(user);
-
+  
+  window.scrollTo(0, 0);
   openPopup();
 
   return true;
