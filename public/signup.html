@@ -80,7 +80,7 @@
             <section id="login-form" class="col-6 form-inicio_sesion">
                 <div class="formulario">
                     <h1 class="form-h1-espacio">Registrarse</h1>
-                    <form class="form-info" id="registration-form">
+                    <form class="form-info" id="registration-form" onsubmit="handleFormAndPopup(event)">
                         <div class="names_form">
                             <div class="espacio registro-group">
                                 <h3 class="text-start">Nombre</h3>
@@ -108,7 +108,13 @@
                         </div>
 
                         <div>
-                            <button onclick="return validateForm()" id="btn-crear-cuenta" type="submit">Crear cuenta</button>
+                            <input onclick="validateForm(event)" id="btn-crear-cuenta" type="submit">
+                            <div class="popup-registro" id="popup-registro">
+                                <img src="./assests/images/popup-party.png" alt="">
+                                <h2>¡Felicidades!</h2>
+                                <p>Tu cuenta ha sido creada exitosamente<br><br>Has ganado s/.20 de descuento para usar en tu primera compra.</p>
+                                <button type="button" onclick="handleFormAndClosePopup(event)">OK</button>
+                            </div>
                         </div>
 
                         <div class="span-btn">
@@ -186,6 +192,7 @@
     
     <script src="./assests/scripts/active-state.js"></script>
     <script src="./assests/scripts/signup.js"></script>
+    <script src="./assests/scripts/shopping-cart.js"></script>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
