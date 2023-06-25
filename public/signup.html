@@ -48,7 +48,28 @@
                 <button type="submit">Buscar</button>
             </div>
             <div class="icons d-flex justify-content-around">
-                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+                <!--Cart icon-->
+                <i id="cart-icon" class="fas fa-shopping-cart" style="cursor: pointer;"></i>
+                <!--Cart section-->
+                <section class="cart">
+                    <h3>Tu carrito</h3>
+                    <div class="empty-cart">
+                        <p>El carrito está vacío.</p>
+                        <i class="fa-regular fa-face-sad-cry"></i>
+                    </div>
+                    <div class="cart-content">
+                        
+                    </div>
+                    <!--Total-->
+                    <div class="cart-total">
+                        <h4>Total</h4>
+                        <div class="total-price">s/.0.00</div>
+                    </div>
+                    <!--Buy Button-->
+                    <button type="button" class="btn-buy-cart" onclick = "window.location.href = './pago.html';">Comprar ahora</button>
+                    <!--Close cart-->
+                    <button id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+                </section>
                 <a href="./login.html"><i class="fas fa-user"></i></a>
             </div>
         </nav>
@@ -59,7 +80,7 @@
             <section id="login-form" class="col-6 form-inicio_sesion">
                 <div class="formulario">
                     <h1 class="form-h1-espacio">Registrarse</h1>
-                    <form class="form-info" id="registration-form">
+                    <form class="form-info" id="registration-form" onsubmit="handleFormAndPopup(event)">
                         <div class="names_form">
                             <div class="espacio registro-group">
                                 <h3 class="text-start">Nombre</h3>
@@ -87,7 +108,13 @@
                         </div>
 
                         <div>
-                            <button onclick="return validateForm()" id="btn-crear-cuenta" type="submit">Crear cuenta</button>
+                            <input onclick="validateForm(event)" id="btn-crear-cuenta" type="submit">
+                            <div class="popup-registro" id="popup-registro">
+                                <img src="./assests/images/popup-party.png" alt="">
+                                <h2>¡Felicidades!</h2>
+                                <p>Tu cuenta ha sido creada exitosamente<br><br>Has ganado s/.20 de descuento para usar en tu primera compra.</p>
+                                <button type="button" onclick="handleFormAndClosePopup(event)">OK</button>
+                            </div>
                         </div>
 
                         <div class="span-btn">
@@ -165,6 +192,7 @@
     
     <script src="./assests/scripts/active-state.js"></script>
     <script src="./assests/scripts/signup.js"></script>
+    <script src="./assests/scripts/shopping-cart.js"></script>
     
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
