@@ -3,6 +3,12 @@
         padding: 6rem 4rem;
     }
 
+    .regiones {
+        .regiones-fondo {
+            width: 70%;
+        }
+    }
+
     .our-team {
         .row{
             .personal{
@@ -13,7 +19,6 @@
             }
         }
     }
-
     
     .container-productos-vendidos{
         .container-slider{
@@ -53,5 +58,10 @@
                 }
             }
         }
-    }    
+    }   
+    
+    footer{
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
 }

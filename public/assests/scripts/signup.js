@@ -7,7 +7,7 @@ function validateName() {
 
   if (name.length == 0) {
     nameError.style.color = "red";
-    nameError.innerHTML = "Name is required";
+    nameError.innerHTML = "Ingrese sus nombres";
     inputElement.classList.remove("valid");
     inputElement.classList.add("invalid");
     return false;
@@ -40,7 +40,7 @@ function validateLastName() {
 
   if (LastName.length == 0) {
     LastNameError.style.color = "red";
-    LastNameError.innerHTML = "LastName is required";
+    LastNameError.innerHTML = "Ingrese sus apellidos";
     inputElement.classList.remove("valid");
     inputElement.classList.add("invalid");
     return false;
@@ -116,7 +116,7 @@ function validateEmail() {
   var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
   if (!emailPattern.test(email)) {
-    emailError.innerHTML = "Invalid Email";
+    emailError.innerHTML = "Email inválido";
     inputElement.classList.remove("valid");
     inputElement.classList.add("invalid");
     return false;

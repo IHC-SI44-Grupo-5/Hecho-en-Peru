@@ -232,6 +232,7 @@
 }
 
 .regiones {
+    //display: none;
     .row {
         padding-left: 0;
         padding-right: 0;
@@ -246,7 +247,7 @@
     }
 
     .regiones-fondo {
-        width: 29.5rem;
+        width: 30%;
         height: 25rem;
         font-size: small;
         transition: all 0.5s ease;
