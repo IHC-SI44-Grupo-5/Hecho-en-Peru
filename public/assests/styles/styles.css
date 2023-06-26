@@ -543,7 +543,7 @@ nav .icons .hamburger {
   height: 25rem;
 }
 .regiones .regiones-fondo {
-  width: 29.5rem;
+  width: 30%;
   height: 25rem;
   font-size: small;
   transition: all 0.5s ease;
@@ -3166,6 +3166,9 @@ footer div:nth-child(2) h3 {
   nav .icons .hamburger {
     display: block;
   }
+  .regiones .regiones-fondo {
+    width: 50%;
+  }
   .our-team .row .personal {
     width: 23%;
   }
@@ -3182,6 +3185,9 @@ footer div:nth-child(2) h3 {
 @media screen and (max-width: 768px) {
   .inicio-fondo {
     padding: 6rem 4rem;
+  }
+  .regiones .regiones-fondo {
+    width: 70%;
   }
   .our-team .row .personal {
     width: 31%;
@@ -3200,6 +3206,10 @@ footer div:nth-child(2) h3 {
   }
   .interest-products .container-slider .container-carousel .carousel {
     grid-auto-columns: calc(50% - 12px);
+  }
+  footer {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
   }
 }
 @media screen and (max-width: 576px) {
