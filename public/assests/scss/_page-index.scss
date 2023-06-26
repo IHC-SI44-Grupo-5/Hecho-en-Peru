@@ -6,189 +6,227 @@
 
 .inicio-fondo {
     background-color: $background-color_5;
-    padding: 4rem 18rem;
-    width: 100%;
-
-    button {
-        background-color: $background-color_6;
-        color: $color_5;
-        border: none;
-        width: 11.2rem;
-        font-size: 1rem;
-        font-weight: 600;
-        padding: 0.6rem 0.6rem;
-        border-radius: 0.9rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-
-        &:hover {
-            background-color: $background-color_7;
-            color: $color_5;
-            box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
-        }
-    }
-
-    h1 {
-        font-size: 3rem;
-        font-family: $font-family_2;
-        padding-bottom: 1.5rem;
-    }
-}
-
-.container-productos-vendidos {
-    width: 90%;
-    margin: auto;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-}
-
-.container-regiones {
-    width: 90%;
-    margin: auto;
-    margin-top: 3.5rem;
-}
-
-.sold-products {
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        justify-items: center;
-        align-items: center;
-        text-align: center;
-        background-color: $background-color_1;
-    }
-
-    .grid-h3 {
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        grid-template-rows: 1fr;
-        justify-content: center;
-        align-content: center;
-        grid-template-areas: "name price";
-    }
-
-    .s-product {
-        padding: 0rem 0.6rem;
-        background-color: $background-color_1;
-        margin-bottom: 6rem;
-        height: 17rem;
-
-        img {
-            border: solid 1px rgba(0, 0, 0, 0.1882352941);
-            border-radius: 1.25rem;
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .name-product {
-            grid-area: name;
-            padding: 0;
-            margin: 0;
-        }
-
-        .price {
-            font-size: 1rem;
-            font-weight: 400;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            justify-content: start;
-            grid-area: price;
-            margin: 0;
-        }
-
-        .region {
-            font-size: 1rem;
-            font-weight: 300;
-            color: $color_6;
-            margin: 0;
-        }
-    }
-}
-
-.container-personal {
-    margin: 4rem 0;
-}
-
-.our-services {
-    background-color: $background-color_8;
-    padding: 3rem 0;
-    display: flex;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    margin: auto;
-
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 90%;
-
-        .col-md-3 {
-            margin: 0;
-            padding-left: 0;
-            padding-right: 0;
-            width: 24%;
-        }
-    }
-
-    .fondo-services-img-1 {
-        background-image: url("../images/img-index/servicios/1.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 0.5rem;
-        opacity: 0.9;
-    }
-
-    .fondo-services-img-2 {
-        background-image: url("../images/img-index/servicios/2.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 0.5rem;
-        opacity: 0.9;
-    }
-
-    .fondo-services-img-3 {
-        background-image: url("../images/img-index/servicios/3.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 0.5rem;
-        opacity: 0.9;
-    }
-
-    .fondo-services-img-4 {
-        background-image: url("../images/img-index/servicios/4.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 0.5rem;
-        opacity: 0.9;
-    }
-
-    .services-fondo {
-        background-color: $background-color_9;
+    padding: 6rem;
+    .text-white{
         width: 100%;
-        height: 19rem;
-        padding: 1.4rem;
-        font-size: 1rem;
-        color: $color_7;
-        gap: 6.2rem;
-        transition: all 0.5s ease;
+        text-align: center;
+        button {
+            background-color: $background-color_6;
+            color: $color_5;
+            border: none;
+            width: 11.2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.6rem 0.6rem;
+            border-radius: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+    
+            &:hover {
+                background-color: $background-color_7;
+                color: $color_5;
+                box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1019607843);
+            }
+        }
+    
+        h1 {
+            font-size: 3rem;
+            font-family: $font-family_2;
+            padding-bottom: 1.5rem;
+        }
+    }
+}
+
+.container-productos-vendidos{
+    margin: 5rem 0;
+    background-color: $background-color_1;
+    h2{
+        padding: 2rem 0;
+        text-align: center;
+    }
+    .container-slider{
         display: flex;
         justify-content: center;
-        align-items: center;
-        text-align: center;
-        border-radius: 0.25rem;
+        padding: 0 2rem;
+        padding-bottom: 2rem;
+        .container-carousel{
+            max-width: 87rem;
+            width: 100%;
+            position: relative;
+            .caret{
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                opacity: 50%;
+                &:first-child{
+                    left: -1.5rem;
+    
+                }
+                &:last-child{
+                    right: -1.5rem;
+                }
+            }
+            .carousel{
+                display: grid;
+                grid-auto-flow: column;
+                grid-auto-columns: calc(((100%)/3) - 12px);
+                gap: 16px;
+                margin-bottom: 0;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                scrollbar-width: none;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+                .carousel-product{
+                    scroll-snap-align: end;
+                    background-color: $background-color_1;
+                    position: relative;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &:hover{
+                        figure{
+                            box-shadow: inset 0 0.5rem 1rem #0000003b;
+                            img{
+                                transform: scale(1.1, 1.1);
+                            }
+                        }
+                    }
+                    figure{
+                        border: solid 1px rgba(0, 0, 0, 0.1882352941);
+                        border-radius: 1.25rem;
+                        width: 90%;
+                        margin-top: 1rem;
+                        margin-bottom: 0;
+                        border-radius: 0.9rem;
+                        text-align: center;
+                        overflow: hidden;
 
-        &:hover {
-            background-color: $background-color_5;
-            color: $color_5;
+                        img{
+                            width: 100%;
+                            height: 12rem;
+                            object-fit: cover;
+                            transition: all 1s ease;
+                        }
+                    }
+                    .info-product{
+                        margin-top: 1rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin-bottom: 1rem;
+                        h3{
+                            margin: 0;
+                        }
+                        p{
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.container-servicios{
+    margin: 5rem 0;
+    background-color: $background-color_8;
+    padding: 2rem 0 ;
+    h2{
+        padding: 2rem 0;
+        text-align: center;
+    }
+    .container-slider{
+        display: flex;
+        justify-content: center;
+        padding: 0 2rem;
+        padding-bottom: 2rem;
+        .container-carousel{
+            max-width: 87rem;
+            width: 100%;
+            position: relative;
+            .caret{
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                opacity: 50%;
+                &:first-child{
+                    left: -1.5rem;
+    
+                }
+                &:last-child{
+                    right: -1.5rem;
+                }
+            }
+            .carousel{
+                display: grid;
+                grid-auto-flow: column;
+                grid-auto-columns: calc(((100%)/4) - 12px);
+                gap: 16px;
+                margin-bottom: 0;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                scrollbar-width: none;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+                .carousel-product{
+                    .services-fondo{
+                        scroll-snap-align: end;
+                        background-color: $background-color_9;
+                        width: 100%;
+                        height: 19rem;
+                        padding: 1.4rem;
+                        font-size: 1rem;
+                        color: $color_7;
+                        gap: 6.2rem;
+                        transition: all 0.5s ease;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+                        border-radius: 0.5rem;
+                        &:hover {
+                            background-color: $background-color_5;
+                            color: $color_5;
+                        }
+                    }
+                }
+
+                .fondo-services-img-1 {
+                    background-image: url("../images/img-index/servicios/1.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 0.5rem;
+                    opacity: 0.9;
+                }
+                .fondo-services-img-2 {
+                    background-image: url("../images/img-index/servicios/2.jpeg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 0.5rem;
+                    opacity: 0.9;
+                }
+                .fondo-services-img-3 {
+                    background-image: url("../images/img-index/servicios/3.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 0.5rem;
+                    opacity: 0.9;
+                }
+            
+                .fondo-services-img-4 {
+                    background-image: url("../images/img-index/servicios/4.png");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    border-radius: 0.5rem;
+                    opacity: 0.9;
+                }
+            }
         }
     }
 }
@@ -253,6 +291,10 @@
     }
 }
 
+.container-personal {
+    margin: 4rem 0;
+}
+
 .our-team {
     background-color: $background-color_11;
     display: flex;
@@ -296,6 +338,7 @@
             flex-direction: column;
             justify-content: center;
             position: relative;
+            width: 18%;
 
             img {
                 margin-top: 2rem;
@@ -319,51 +362,76 @@
     }
 }
 
-.container-testimonios {
-    display: flex;
-    justify-content: center;
-    padding-top: 0.5rem;
-    margin-bottom: 5rem;
-
-    .testimonios {
-        background-color: $background-color_12;
+.container-testimonios{
+    margin: 5rem 0;
+    background-color: $background-color_12;
+    h2{
+        padding: 2rem 0;
+        text-align: center;
+    }
+    .container-slider{
         display: flex;
-        flex-direction: column;
-        padding: 3rem 2rem;
-        width: 90%;
-
-        .row {
-            .card-testimonio {
-                background-color: $background-color_1;
-                padding: 1rem 1rem;
-                display: flex;
-                flex-direction: column;
-
-                img {
-                    border-radius: 0.3rem;
-                    height: 3.5rem;
-                    object-fit: cover;
+        justify-content: center;
+        padding: 0 2rem;
+        padding-bottom: 2rem;
+        .container-carousel{
+            max-width: 87rem;
+            width: 100%;
+            position: relative;
+            .caret{
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                opacity: 50%;
+                &:first-child{
+                    left: -1.5rem;
+                }
+                &:last-child{
+                    right: -1.5rem;
                 }
             }
+            .carousel{
+                display: grid;
+                grid-auto-flow: column;
+                grid-auto-columns: calc(((100%)/3) - 12px);
+                gap: 16px;
+                margin-bottom: 0;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
+                scrollbar-width: none;
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+                .carousel-product{
+                    scroll-snap-align: end;
+                    .card-testimonio{
+                        background-color: $background-color_1;
+                        padding: 1rem 1rem;
+                        border-radius: 0.5rem;
+                        display: flex;
+                        flex-direction: column;
 
-            .card-star {
-                display: flex;
-                justify-content: center;
-                padding: 1rem;
+                        img {
+                            border-radius: 0.3rem;
+                            height: 3.5rem;
+                            object-fit: cover;
+                        }
+                    }
+                    .card-star {
+                        display: flex;
+                        justify-content: center;
+                        padding: 1rem;
+                    }
+                }
             }
         }
-
-        .p {
-            padding-top: 1rem;
-            margin-bottom: 0;
-        }
+    }
+    .p {
+        margin: 0 4rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
     }
 }
 
-.h6-form {
-    padding-top: 3rem;
-}
 
-.opacidad-img {
-    opacity: 0.7;
-}
